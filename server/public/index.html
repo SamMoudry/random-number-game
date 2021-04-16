@@ -14,12 +14,15 @@
     <h1>YOUR GAME HERE!</h1>
     <form action="">
       <div id = "num-in">
-        <input placeholder="Player 1" type="number" class="input" id="playerOne" />
-        <input placeholder="Player 2" type="number" class="input" id="playerTwo" />
+        <input placeholder="Player 1" type="number" class="input" id="playerOne" min="1" max="25" />
+        <input placeholder="Player 2" type="number" class="input" id="playerTwo" min="1" max="25" />
       </div>
     <div>
       <button id="guessBtn">Guess</button>
     </div>
   </form>
+  <div id="output">
+
+  </div>
 </body>
 </html>
