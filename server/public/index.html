@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,33 @@
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-    <h1>YOUR GAME HERE!</h1>
-    <form action="">
-      <div id = "num-in">
-        <input placeholder="Player 1" type="number" class="input" id="playerOne" min="1" max="25" />
-        <input placeholder="Player 2" type="number" class="input" id="playerTwo" min="1" max="25" />
-      </div>
+  <h1>Guess A Number!</h1>
+  <form action="">
+    <div id="num-in">
+      <input placeholder="Player 1" type="number" class="input" id="playerOne" min="1" max="25" />
+      <input placeholder="Player 2" type="number" class="input" id="playerTwo" min="1" max="25" />
+    </div>
     <div>
       <button id="guessBtn">Guess</button>
     </div>
   </form>
-  <div id="output">
+  <h3>Too High or Too Low</h3>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Player 1</th>
+          <th>Player 2</th> 
+        </tr>
+      </thead>
+      <tbody id="output">
+       
+      </tbody>
 
+    </table>
   </div>
 </body>
+
 </html>

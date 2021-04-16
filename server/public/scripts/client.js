@@ -50,6 +50,7 @@ function getGuesses() {
           console.log('Response from server', response);
           // the response is the array from the sever
           // pass the arry into our render method to display
+          //winner( response );
           render( response );
       })
       .catch( function( error ){
@@ -61,22 +62,28 @@ function getGuesses() {
 
 function render( object ){   
      // Empty the container first, in case there is stuff there
-     $('#output').empty();     
+  $('#output').empty();     
      // Loop over the array from the server & append to the DOM
-     for (let i = 0; i < object.taco1.length; i++) {
-         console.log(object.taco1[i]);
-         $('#output').append(`
-                 <div class="card">
-                     <p>${object.taco1[i]}</p>
-                 </div>
-         `);
-     }
-     for (let i = 0; i < object.taco2.length; i++) {
-      console.log(object.taco2[i]);
-      $('#output').append(`
-              <div class="card">
-                  <p>${object.taco2[i]}</p>
-              </div>
-      `);
+  for (let i = 0; i < object.taco1.length; i++) {
+    console.log(object.taco1[i]);
+    if (object.taco1[i] == 1) {
+      alert ('Congratulations Player 1 you WIN!  The correct answer was ' + object.random);
+    } else {
+    $('#output').append(`
+      <tr class="card"> ${object.taco1[i]} </tr>
+    `);
+    }
+  }
+  for (let i = 0; i < object.taco2.length; i++) {
+    console.log(object.taco2[i]);
+    if (object.taco2[i] == 1) {
+      alert ('Congratulations Player 2 you WIN!  The correct answer was ' + object.random);
+     } else {
+    $('#output').append(`
+    <tr class="card"> ${object.taco2[i]} </tr>
+    `);
+    }
   }
 }
+
+

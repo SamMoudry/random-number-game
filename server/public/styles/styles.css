@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+
+}
+
+
+h3 {
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+margin-bottom: .5rem;
+}
+
+table {
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
